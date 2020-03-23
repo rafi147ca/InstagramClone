@@ -2,6 +2,7 @@ package com.rafi.instagramclone;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +23,7 @@ import java.util.List;
 
 public class SignUp extends AppCompatActivity {
 
-    private Button createOject,btnGetAll;
+    private Button createOject,btnGetAll,btnSwitchActvty;
     private EditText edName,edPuchSpeed,edPunchPower,edKickSpeed,edKickPower;
     private TextView txtGetData;
     String allBoxers="";
@@ -39,6 +40,7 @@ public class SignUp extends AppCompatActivity {
 
         txtGetData= findViewById(R.id.txtGetData);
         btnGetAll=findViewById(R.id.btnGetAll);
+        btnSwitchActvty=findViewById(R.id.btnSwitchActvty);
         txtGetData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,6 +76,15 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
+        //Swith to Next Activity
+        btnSwitchActvty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(SignUp.this,SignUpLoginActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
         createOject= findViewById(R.id.createObject);
         createOject.setOnClickListener(new View.OnClickListener() {
