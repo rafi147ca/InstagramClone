@@ -2,96 +2,78 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constrainLayout"
+    android:id="@+id/loginConstraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF9800"
-    android:onClick="rootLayoutTapped"
-    tools:context=".SignUp">
+    android:background="#9C27B0"
+    android:onClick="loginConstntTapped"
+    tools:context=".LoginActivity">
+
+    <Button
+        android:id="@+id/btnSingUpLoginActivity"
+        android:layout_width="245dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#FF5722"
+        android:text="Sign up"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLoginActivity" />
 
     <ImageView
-        android:id="@+id/imgInsta"
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/placeholder" />
 
     <EditText
-        android:id="@+id/edtEnterEmailMain"
+        android:id="@+id/edtEmlLoginActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="100dp"
         android:ems="10"
-        android:hint="Please enter an email id"
+        android:hint="Please enter an email"
         android:inputType="textPersonName"
         android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgInsta" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/edtUserNameMain"
+        android:id="@+id/edtPwdLoginActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="100dp"
         android:ems="10"
-        android:hint="Please enter a username"
-        android:inputType="textPersonName"
-        android:textColorHint="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtEnterEmailMain" />
-
-    <EditText
-        android:id="@+id/edtPasswordMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:hint="Please enter a password"
+        android:hint="Please enter login password"
         android:inputType="textPassword"
         android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUserNameMain" />
+        app:layout_constraintTop_toBottomOf="@+id/edtEmlLoginActivity" />
 
     <Button
-        android:id="@+id/btnLoginMain"
-        android:layout_width="287dp"
-        android:layout_height="47dp"
+        android:id="@+id/btnLoginActivity"
+        android:layout_width="245dp"
+        android:layout_height="42dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:background="#8BC34A"
-        android:text="login"
+        android:text="Login"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignUpMain" />
-
-    <Button
-        android:id="@+id/btnSignUpMain"
-        android:layout_width="287dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="#009688"
-        android:text="Sign up"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPasswordMain" />
+        app:layout_constraintTop_toBottomOf="@+id/edtPwdLoginActivity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
